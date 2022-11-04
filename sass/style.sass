@@ -1,0 +1,72 @@
+body
+  background-color: #ebebeb
+  font-family: 'Poppins', sans-serif
+  margin: 0
+  font-size: 15px
+
+*,*:before,*:after
+  box-sizing: border-box
+
+.container
+  width: 1200px
+  margin: 0 auto
+.header
+  background-color: #000
+
+  &__wrapper
+    display: flex
+    height: 100px
+    justify-content: space-between
+    align-items: center //выравнивание по вертикали
+  &__block
+    width: 20%
+    &:last-child
+      text-align: right
+  &__lng
+    display: flex
+    justify-content: end
+
+    &-link
+      color: #b7b7b7
+      text-transform: uppercase
+      text-decoration: none
+      font-weight: 600
+      margin-right: 8px
+      &.active
+        color: #fff
+      &:last-child
+        margin-right: 0
+
+
+.nav
+  display: flex
+  &__link
+    margin-right: 35px
+    color: #fff
+    text-transform: uppercase
+    text-decoration: none
+    font-weight: 600
+    position: relative
+    &:hover:after
+      opacity: 1
+      
+    &.active
+      &:after
+        opacity: 1
+    
+    &::after
+      transition: opacity .2s ease
+      height: 2px
+      width: 100%
+      background-color: #fff
+      position: absolute
+      top: 100%
+      left: 0 
+      content: ''
+      opacity: 0
+    
+
+    
+    &:last-child
+      margin-right: 0
+
